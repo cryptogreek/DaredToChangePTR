@@ -1480,74 +1480,90 @@ function writeScene(scene) {
 				break;
 			}
 			case "transCatEars" : {
-				addFlag("trans1");
-				loseTokens(1);
-				data.player.newChange +="ears";
-				console.log("catEarsAdded");
-				console.log(data.player.newChange)
-				addTrans();
-				data.player.earsVal = 1;
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
-				writeText("You're not sure how you know for sure, but you have a pair of jet-black cat ears poking out of your head, which you can kinda almost move if you focus.");
-				writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
-				writeText("You reach up and touch them, the glossy fur feeling perfectly soft to the touch; your fingers glide up and down them pretty easily, and it actally feels really nice.");
-				writeText("Especially in the front at the very tips, and down at the back near the base... Rubbing the fluffy tips makes your back shiver, but gently scratching just behind the base ends up with you letting out a little purr...");
-				writeText("After a few more seconds toying with them, you could swear your body starts to heat up a bit...");
-				if(data.player.tailVal == 1){
-					writeText("As you try to stop, though, you feel the same heat rise up from your tail, sending a shiver of pleasure along your entire spine.");
-					writeText("You can feel your tail coil around your body for a moment before you pull your shoulders back, inhaling sharply before your entire body tenses.");
-					writeText("The flash of pleasure is overwhelming, but it only lasts a second before you take a deep breath and steady yourself, fully aware that oppF was watching.");
+				if(data.player.earsVal == 1){
+					writeText("Your ears twitch about for a moment, reminding you that you do, in fact, already have a pair of cat ears poking out of your head.");
 				}
-				else
-					writeText("You stop yourself before you end up going too far, though. Though you're not sure how easy that would be if you had a matching tail to go with it...");
+				else{
+					addFlag("trans1");
+					loseTokens(1);
+					data.player.newChange +="ears";
+					console.log("catEarsAdded");
+					console.log(data.player.newChange)
+					addTrans();
+					data.player.earsVal = 1;
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+					writeText("You're not sure how you know for sure, but you have a pair of jet-black cat ears poking out of your head, which you can kinda almost move if you focus.");
+					writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
+					writeText("You reach up and touch them, the glossy fur feeling perfectly soft to the touch; your fingers glide up and down them pretty easily, and it actally feels really nice.");
+					writeText("Especially in the front at the very tips, and down at the back near the base... Rubbing the fluffy tips makes your back shiver, but gently scratching just behind the base ends up with you letting out a little purr...");
+					writeText("After a few more seconds toying with them, you could swear your body starts to heat up a bit...");
+					if(data.player.tailVal == 1){
+						writeText("As you try to stop, though, you feel the same heat rise up from your tail, sending a shiver of pleasure along your entire spine.");
+						writeText("You can feel your tail coil around your body for a moment before you pull your shoulders back, inhaling sharply before your entire body tenses.");
+						writeText("The flash of pleasure is overwhelming, but it only lasts a second before you take a deep breath and steady yourself, fully aware that oppF was watching.");
+					}
+					else
+						writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching tail to go with it...");
+				}
 				writeTransition("tfScreen", "Think about another transformation");
 				writeTransition("postRound1", "Go back to the game");
 				break;
 			}
 			case "transDogEars" : {
-				addFlag("trans1");
-				loseTokens(1);
-				data.player.newChange +="ears";
-				console.log(data.player.newChange)
-				addTrans();
-				data.player.earsVal = 2;
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
-				writeText("You're not entirely sure how you know, but you have a pair of droopy dog ears coming out from your head. You can flop them around by bouncing your hair about, but can't really control them.");
-				writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
-				writeText("You reach up and touch them, the feeling of the smooth fur on the outside feeling pleasant on your fingers, and the feeling of your fingers on the softer inner parts sending sparks down your neck.");
-				writeText("The best part, though, is the feeling of your hand going down to the base and rubbing roughly, your head and hair shaking about as you realize just how <i>good</i> it feels...");
-				writeText("You aren't sure how long you're scratching and rubbing at your ears before your entire body starts heating up...");
-				if(data.player.tailVal == 2){
-					writeText("As you keep going, your tail starts wagging around uncontrollably, your mind fully aware of, but not really caring about, the thumping of it against the couch.");
-					writeText("Your hands just keep rubbing at it more and more, your breathing reduced to dogged panting as you feel something starting to peak.");
-					writeText("A moment later, pleasure sears through your body before you nearly collapse, your body feeling extra sensitive as you twitch in simple joy from the phantom feeling of your hands.");
-					writeText("oppF just watches you contentedly as you pick yourself up and dust yourself off. Given how many times oppShe's played before, oppShe's probably seen more embarrassing things...");
+				if(data.player.earsVal == 2){
+					writeText("Your ears twitch about for a moment, reminding you that you do, in fact, already have a pair of dog ears poking out of your head.");
 				}
-				else
-					writeText("You stop yourself before you end up going too far, though. Though you're not sure how easy that would be if you had a matching tail to go with it...");
+				else{
+					addFlag("trans1");
+					loseTokens(1);
+					data.player.newChange +="ears";
+					console.log(data.player.newChange)
+					addTrans();
+					data.player.earsVal = 2;
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+					writeText("You're not entirely sure how you know, but you have a pair of droopy dog ears coming out from your head. You can flop them around by bouncing your hair about, but can't really control them.");
+					writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
+					writeText("You reach up and touch them, the feeling of the smooth fur on the outside feeling pleasant on your fingers, and the feeling of your fingers on the softer inner parts sending sparks down your neck.");
+					writeText("The best part, though, is the feeling of your hand going down to the base and rubbing roughly, your head and hair shaking about as you realize just how <i>good</i> it feels...");
+					writeText("You aren't sure how long you're scratching and rubbing at your ears before your entire body starts heating up...");
+					if(data.player.tailVal == 2){
+						writeText("As you keep going, your tail starts wagging around uncontrollably, your mind fully aware of, but not really caring about, the thumping of it against the couch.");
+						writeText("Your hands just keep rubbing at it more and more, your breathing reduced to dogged panting as you feel something starting to peak.");
+						writeText("A moment later, pleasure sears through your body before you nearly collapse, your body feeling extra sensitive as you twitch in simple joy from the phantom feeling of your hands.");
+						writeText("oppF just watches you contentedly as you pick yourself up and dust yourself off. Given how many times oppShe's played before, oppShe's probably seen more embarrassing things...");
+					}
+					else
+						writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching tail to go with it...");
+				}
 				writeTransition("tfScreen", "Think about another transformation");
 				writeTransition("postRound1", "Go back to the game");
 				break;
 			}
 			case "transFoxEars" : {
-				addFlag("trans1");
-				loseTokens(1);
-				data.player.newChange +="ears";
-				console.log(data.player.newChange)
-				data.player.earsVal = 4;
-				addTrans();
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
-				writeText("You're not entirely sure how you know, but you definitely have a pair of fluffy fox ears poking out of your head. The fur is almost absurdly soft...");
-				writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
-
-				if(data.player.tailVal == 4){
-
+				if(data.player.earsVal == 4){
+					writeText("Your ears twitch about for a moment, reminding you that you do, in fact, already have a pair of fox ears poking out of your head.");
 				}
-				else
-					writeText("You stop yourself before you end up going too far, though. Though you're not sure how easy that would be if you had a matching tail to go with it...");
+				else{
+					addFlag("trans1");
+					loseTokens(1);
+					data.player.newChange +="ears";
+					console.log(data.player.newChange)
+					data.player.earsVal = 4;
+					addTrans();
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					writeText("Almost immediately, a sweet-smelling haze seems to settle over your head, heat feeling like it's radiating down into your body for a few seconds before it stops.");
+					writeText("You're not entirely sure how you know, but you definitely have a pair of fluffy fox ears poking out of your head. The fur is almost absurdly soft...");
+					writeText("They do seem to twitch on their own every few seconds, but aside from that, they just feel sensitive to the air around you.");
+					writeText("Reaching your hands up, you lightly grab a nice, fluffy handful and start toying around with them to see how they feel, your body relaxing quite a bit as you just enjoy the fluff.");
+					writeText("If anything, it makes you a little drowsy... You feel incredibly comfy while just toying with the fluffiness, finding it a little hard to focus...");
+					if(data.player.tailVal == 4){
+						
+					}
+					else
+						writeText("You stop yourself before you end up getting too distracted, though. You're not sure how easy that would be if you had a matching tail to go with it...");
+				}
 				writeTransition("tfScreen", "Think about another transformation");
 				writeTransition("postRound1", "Go back to the game");
 				break;
@@ -1781,9 +1797,22 @@ function writeScene(scene) {
 				addFlag("trans1");
 				loseTokens(1);
 				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				data.player.newChange += "transFemDick";
-				data.player.dick = 3;
-				data.player.genitalsVal = 3;
+				if(data.player.dick > 3){
+					data.player.newChange += "transFemDick";
+					data.player.dick = 3;
+					data.player.genitalsVal = 3;
+					writeText("As the coin shatters, you can feel a faint energy pass through your body, making everything feel lighter for a moment.");
+					writeText("That energy swirls around inside for a moment, before focusing completely on your cock.");
+					writeText("As that feeling quickly turns into pleasure, you can't help but buck your hips as a feeling like an orgasm, but not <i>quite</i> as satisfying, pulses through you.");
+					writeText("When it passes, your breathing is a bit ragged, and you can see you were practically <i>pissing</i> out precum... and that your cock has shrunk down to a meager three inches.");
+				}
+				else if(data.player.dick > 2){
+					data.player.newChange += "transFemDick";
+					data.player.dick = 2;
+					data.player.genitalsVal = 3;
+
+				}
+				else
 
 				writeTransition("tfScreen", "Think about another transformation");
 				writeTransition("postRound1", "Go back to the game");
@@ -1948,12 +1977,12 @@ function writeScene(scene) {
 				if(data.player.dick < 4){
 					writeText("Your hips immediately clap against oppHers as oppShe shifts around.");
 					writeSpeech("opp","","Ah, you bottomed out...");
-					if(data.story[0].sex == "F"){
+					if(data.story[0].sex == "F")
 						writeText("OppShe brings oppHer hand to oppHer pussy again, toying with it idly.");
-					}
-					else{
+					
+					else
 						writeText("OppShe brings oppHer hand to oppHer dick, stroking it slowly from top to bottom.");
-					}
+					
 					writeSpeech("opp","","Go ahead and start thrusting. We might as well try to have fun, right?");
 					writeText("OppShe keeps toying with herself while you pound into oppHer ass, not really able to pull out too much without actually pulling out.");
 					writeText("After around a minute of this, oppF starts shifting around, arching oppHer back more and panting as oppHer hand picks up speed.");
@@ -1962,7 +1991,10 @@ function writeScene(scene) {
 					writeText("oppF's hand stops, curiosity evident in oppHer voice as you start spurting inside of oppHer.");
 					writeSpeech("opp","","A quickshot...? Well, I guess that's fine.");
 					writeText("OppShe pulls oppHimself off of you, standing up straight.");
-					writeSpeech("opp","","Err... No offense, but maybe next time, you should catch?");
+					if(data.story[0].sex == "F")
+						writeSpeech("opp","","Err... No offense, but maybe you want grow yourself a little before next time?");
+					else
+						writeSpeech("opp","","Err... No offense, but maybe next time, you should catch?");
 					writeTransition("postRound1", "Go back");
 					break;
 				}
