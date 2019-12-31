@@ -1454,7 +1454,9 @@ function writeScene(scene) {
 				writeTransition("transMascChest", "Change to look a bit more manly");
 			else
 				writeText("Your body is already pretty broad and stocky, so it'd be a waste of a coin to try again.");
-			if(data.player.flags.includes("transFemAss")){
+			if(data.player.assVal == 6)
+				writeText("You've already firmed up your ass a lot, so doing the same thing would probably be a waste of a coin.");
+			else if(data.player.flags.includes("transFemAss")){
 				writeText("Using tokens to make your ass both more firm and more jiggly has caused some small compatibility issues, but you can still try and firm up.");
 				writeTransition("transMascAss", "Firm up that rear");
 			}
@@ -1462,9 +1464,6 @@ function writeScene(scene) {
 				writeText("You could also firm up that ass of yours specifically...");
 				writeTransition("transMascAss", "Firm up that rear");
 			}
-			else
-				writeText("You've already firmed up your ass a lot, so doing the same thing would probably be a waste of a coin.");
-
 			if(data.player.dick > 11){
 				writeText("Unfortunately, with a foot-long gut-puncher, growing any further is probably a bad idea for oppF's health...");
 				if(data.player.fName == "Testing")
@@ -1713,7 +1712,7 @@ function writeScene(scene) {
 		case "transMascAss" : {
 			addFlag("trans1");
 			loseTokens(1);
-			data.player.assVal = 1;
+			data.player.assVal = 6;
 			data.player.newChange += "transMascAss";
 			data.player.flags += "transMascAss";
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
