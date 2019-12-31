@@ -2484,7 +2484,7 @@ function writeScene(scene) {
 		}
 		case "round2" : {
 			writeText("Unfortunately, the second round of the game hasn't been implemented yet - only the first. The rest of the content can be found in the transformation menu and in chatting with oppF - keep in mind that lines in the available sex scenes do change depending on some of your transformations.");
-			writeTransition(""+currentScene, "Go back");
+			writeTransition(""+data.player.currentScene, "Go back");
 			break;
 		}
 		default: {
@@ -2494,7 +2494,7 @@ function writeScene(scene) {
 			writeText("" + JSON.stringify(data) + "");
 			writeText("Browser:" + navigator.appCodeName  + "");
 			writeText("OS:" + navigator.platform  + "");
-			writeTransition(""+currentScene, "Go back");
+			writeTransition(""+data.player.currentScene, "Go back");
 			break;
 		}
 	}
