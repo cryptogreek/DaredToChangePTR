@@ -1638,17 +1638,20 @@ function writeScene(scene) {
 			break;
 		}
 		case "transCatTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.tailVal = 1;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-		
+			if(data.player.tailVal == 1)
+				writeText("The elegant, glossy tail behind you reminds you that you kinda already have one of those...");
+			else{
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.tailVal = 1;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
@@ -1674,17 +1677,20 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFoxTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.tailVal = 4;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-			
+			if(data.player.tailVal == 1)
+				writeText("The giant fluffy tail behind you reminds you that you kinda already have one of those...");
+			else{
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.tailVal = 4;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
