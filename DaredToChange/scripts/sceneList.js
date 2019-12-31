@@ -1718,13 +1718,17 @@ function writeScene(scene) {
 				data.player.tailVal = 4;
 				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
 				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-				writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
+				writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion.");
 				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+				writeText("You end up leaning back into it a bit, the excess fluff making you feel a lot like someone small leaning into a really big beanbag chair.");
 				if(data.player.earsVal == 4){
-					writeText("tempText");
+					writeText("Between both the ears and the tail, you could swear you can feel the smallest change in the air (though it probably only feels like it).");
+					writeText("You can't help yourself as you shift around in place, feeling almost ridiculously comfy in your fluff-palace, gazing over the shimmering almost-blank board from the warm safety of your tail.");
+					writeText("From the way that oppF is looking at your tail, it's pretty plainly obvious oppShe likes the way it looks, and might even be a little jealous... which someone makes it even better.");
+					writeText("You're confident that you're giving off some sort of <i>smug-aura</i> as you settle in place and refocus...");
 				}
 				else
-					writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching pair of ears to go with it...");
+					writeText("It's actually <i>really</i> comfortable, so you end up deciding to sit like that for a while...");
 			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
