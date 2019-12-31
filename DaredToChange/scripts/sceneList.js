@@ -1677,7 +1677,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transDogTail" : {
-			if(data.player.tailVal == 1)
+			if(data.player.tailVal == 2)
 				writeText("The floofy, waggling tail behind you reminds you that you kinda already have one of those...");
 			else{
 				addFlag("trans1");
