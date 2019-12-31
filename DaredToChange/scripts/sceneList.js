@@ -492,9 +492,8 @@ function writeScene(scene) {
 			writeText("oppF grins wolfishly.");
 			writeSpeech("opp","","I'll be looking forward to it... But for now, collect your prize.");
 			writeText("The sound of a faint <i>clink</i> from the gameboard pulls your attention to the same little port that the card came out of. Despite definitely not having been large enough to fit quarter-sized tokens, the slot still popped a pair of them out.");
-			addTokens(2);
-			writeSpeech("opp","","It stretches. Magically.");
-			writeText("oppF points to the slot, an amused look playing across oppHer face.");
+			addTokens(5);
+			writeSpeech("opp","","Oh yeah, forgot to mention, but the first round always gives extra tokens, so players get a chance to play around at the start.");
 			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
@@ -534,9 +533,8 @@ function writeScene(scene) {
 			writeText("oppF grins wolfishly.");
 			writeSpeech("opp","","I'll be looking forward to it... But for now, collect your prize.");
 			writeText("The sound of a faint <i>clink</i> from the gameboard pulls your attention to the same little port that the card came out of. Despite definitely not having been large enough to fit quarter-sized tokens, the slot still popped a pair of them out.");
-			addTokens(2);
-			writeSpeech("opp","","It stretches. Magically.");
-			writeText("oppF points to the slot, an amused look playing across oppHer face.");
+			addTokens(5);
+			writeSpeech("opp","","Oh yeah, forgot to mention, but the first round always gives extra tokens, so players get a chance to play around at the start.");
 			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
@@ -594,9 +592,8 @@ function writeScene(scene) {
 			writeSpeech("player","","That makes sense. Still a little weird, though.");
 			writeSpeech("opp","","Eh, that's magic for ya. I find it's a lot more fun if you just roll with it and have some fun with whatever gets thrown at you.");
 			writeText("A clink from the side of the board pulls your attention to the card-slot, which, despite clearly not being large enough to fit a token through, just spat one out.");
-			addTokens(1);
-			writeText("oppF loosely points to it, still looking amused.");
-			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too.");
+			addTokens(4);
+			writeSpeech("opp","","Oh yeah, forgot to mention, but the first round always gives three extra tokens, so players get a chance to play around at the start.");
 			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
@@ -690,7 +687,8 @@ function writeScene(scene) {
 			writeSpeech("opp","","You're good at this, but I think I'd like to see what my turn will have me do. Though if it's particularly boring, I might ask you to do the same to the other foot. For now, though?");
 			writeText("A clink from the side of the board pulls your attention to the card-slot, which, despite clearly not being large enough to fit a token through, just spat one out.");
 			writeSpeech("opp","","Go ahead and take that reward of yours, playerF. You earned it.");
-			addTokens(2);
+			addTokens(5);
+			writeSpeech("opp","","Oh yeah, forgot to mention, but the first round always gives three extra tokens, so players get a chance to play around at the start.");
 			writeSpeech("player","","Huh. How do the tokens fit?");
 			writeText("oppF loosely points to it, still looking amused.");
 			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too, though I don't remember the name off the top of my head.");
@@ -781,7 +779,8 @@ function writeScene(scene) {
 			writeSpeech("opp","","You're good at this, but I think I'd like to see what my turn will have me do. Though if it's particularly boring, I might ask if I can return the favor... For now, though?");
 			writeText("A clink from the side of the board pulls your attention to the card-slot, which, despite clearly not being large enough to fit a token through, just spat one out.");
 			writeSpeech("opp","","Go ahead and take that reward of yours, playerF. You earned it.");
-			addTokens(2);
+			addTokens(5);
+			writeSpeech("opp","","Oh yeah, forgot to mention, but the first round always gives three extra tokens, so players get a chance to play around at the start.");
 			writeSpeech("player","","Huh. How do the tokens fit?");
 			writeText("oppF loosely points to it, still looking amused.");
 			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too, though I don't remember the name of the top of my head..");
@@ -829,9 +828,9 @@ function writeScene(scene) {
 			writeSpeech("player","","That makes sense. Still a little weird, though.");
 			writeSpeech("opp","","Eh, that's magic for ya. I find it's a lot more fun if you just roll with it and have some fun with whatever gets thrown at you.");
 			writeText("A clink from the side of the board pulls your attention to the card-slot, which, despite clearly not being large enough to fit a token through, just spat one out.");
-			addTokens(1);
-			writeText("oppF loosely points to it, still looking amused.");
-			writeSpeech("opp","","It stretches. One of the tiles actually can make <i>people</i> a little stretchy too.");
+
+			addTokens(4);
+			writeSpeech("opp","","Oh yeah, forgot to mention, but the first round always gives three extra tokens, so players get a chance to play around at the start.");
 			writeText("A second later, though, and the entire board seems to shimmer sharply - the only part that doesn't turn white is your tile.");
 			writeText("It barely lasts a moment before settling, revealing a path forward for oppF's token.");
 			writeSpeech("opp","","And with that, it looks like it's my turn.");
@@ -1746,6 +1745,7 @@ function writeScene(scene) {
 			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
 			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, before rapidly collecting around your torso.");
 			writeText("It feels like little sparks of pleasure dancing across your skin before a sharp pang of pleasure shoots through you.");
+			writeText("Your chest starts to feel a lot firmer, the muscles tightening up underneath the skin as you roll your shoulders, feeling how much broader they are.");
 			writeText("Looking down, you can see your torso is a lot broader and more toned, and definitely stronger looking.");
 
 			writeTransition("tfScreen", "Think about another transformation");
@@ -1762,6 +1762,7 @@ function writeScene(scene) {
 			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, though it very quickly fixates on your rear.");
 			writeText("Sparks of pleasure dart along the surface, feeling like a fast, sharp massage across the skin before it suddenly stops.");
 			writeText("Looking down, you can see your ass is looking a lot firmer, more toned, and damn-fine-looking.");
+			writeText("Giving it a nice, solid squeeze, it feels pretty solid in your hand, and your hand feels pretty good grabbing at it...");
 
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
@@ -1781,13 +1782,15 @@ function writeScene(scene) {
 				data.player.dick = 9;
 				data.player.genitalsVal = 8;
 				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your already above-average cock grows. At this point, you're probably around where most people would want to stop...");
+				writeText("A flash of pleasant heat surges through your crotch, forcing a moan out of you as your already above-average cock grows. At this point, you're probably around where most people would want to stop.");
+				writeText("It definitely feels more sensitive now, though, with just the feeling of your pants against it feeling almost too good to keep them on...");
 			}
 			else if (data.player.dick < 10){
 				data.player.dick = 10;
 				data.player.genitalsVal = 8;
 				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				writeText("A flash of almost burning, pleasureful heat surges through your crotch, the moan not even able to spill out out of you as your already large cock grows even more. By the time the heat-haze over your head clears, it's pretty obvious that most people wouldn't be comfortable taking your full length...");
+				writeText("A flash of almost burning, pleasureful heat surges through your crotch, the moan not even able to spill out out of you as your already large cock grows even more. By the time the heat-haze over your head clears, it's pretty obvious that most people wouldn't be comfortable taking your full length.");
+				writeText("Despite that, though, if feels like it's only getting more sensitive, the feeling of just putting your palm against it almost enough to make you moan out loud.");
 			}
 			else{
 				data.player.dick = 12;
