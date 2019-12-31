@@ -1312,7 +1312,17 @@ function writeScene(scene) {
 					writeText("OppShe marvels at the sight of your giant breasts.");
 					writeSpeech("opp","","Taking it to the extreme, huh? Glad you're enjoying yourself! But you'd better share the fun of them with me...");
 				}
-				if(data.player.newChange.includes("transFemAss")){
+				if(data.player.newChange.includes("transBigAss")){
+					if(data.story[0].sex == "F"){
+						writeText("OppHer eyes hungrily take in your massive ass as oppShe licks her lips.");
+						writeSpeech("opp","","If I had a dick or a strap-on, the things I would do to you...~!");
+					}
+					else{
+						writeText("OppHer cock twitches sharply at the sight of your titanic ass, oppHer eyes taking in every inch.");
+						writeSpeech("opp","","You look incredible... The later challenges cannot come fast enough...");
+					}
+				}
+				else if(data.player.newChange.includes("transFemAss")){
 					if(data.story[0].sex == "F"){
 						writeText("She stares at your newly-fat ass with a look of excitement.");
 						writeSpeech("opp","","I cannot <i>wait</i> to see how that thing jiggles~!");
@@ -1322,7 +1332,34 @@ function writeScene(scene) {
 						writeSpeech("opp","","God, you're making it hard to not just pin you down right here...");
 					}
 				}
-				if(data.player.newChange.includes("transFemDick")){
+				if(data.player.newChange.includes("bimboBod")){
+					if(data.story[0].sex == "F"){
+						writeText("Looking over your newly curvacious body from top to bottom, oppShe smiles and nods.");
+						writeSpeech("opp","","You like like an absolute <i>whore,</i> hun, and it's <i>making me jealous~!</i>");
+					}
+					else if(data.story[0].sex == "M"){
+						writeText("OppShe gives up trying to play it cool, oppHer hand casually toying with oppHer shaft.");
+						writeSpeech("opp","","This game is shaping up <i>very</i> nicely. I can't wait to see what the game makes you do with a body like that...");
+					}
+					else{
+						writeText("OppShe grins, one hand playing with one of her breasts while the other toys with her shaft.");
+						writeSpeech("opp","","Looks like the two of us match now, huh? Trust me, you're going to <i>love</i> feeling like a total <i>whore</i> with those curves~!");
+					}
+				}
+				if(data.player.newChange.includes("transFemClit")){
+					if(data.story[0].sex == "F"){
+						writeText("oppF is trying to play it cool, but oppHer flushed face and heaving chest make it clear <i>exactly</i> how turned on your little display made oppHer.");
+						if(data.player.flags.includes("strapOn"))
+							writeSpeech("opp","","God, that looked incredible... I am <i>so</i> gonna make you cum from anal, you little <i><b>slut~!</b></i>");
+						else
+							writeSpeech("opp","","That was one <i>Hell</i> of a show, hun... I wish I had a strap-on, just to see what the face you make when you properly get <i>fucked.</i>");
+					}
+					else{
+						writeText("oppF is trying to play it cool, but oppHer flushed face and throbbing erection make it clear <i>exactly</i> how turned on your little display made oppHer.");
+						writeSpeech("opp","","That was a <i>Hell</i> of a show. I don't think I've ever seen anyone cum that much before...");
+					}
+				}
+				else if(data.player.newChange.includes("transFemDick")){
 					if(data.story[0].sex == "F"){
 						writeText("A look of amusement flies across oppF's face.");
 						writeSpeech("opp","","There's easier ways to make a girl tease you, hun... But this might be my favorite. I'd love for you to put on a little show for me later with that <i>little toy</i>...");
@@ -1802,6 +1839,7 @@ function writeScene(scene) {
 					writeText("Warmth starts building around your ass, the heat growing more and more as you try to hold back a moan as you feel your rear grow out even more.");
 					writeText("A sensation almost like having it groped across every inch of the surface has you gasping as you could swear you <i>feel</i> the weight of your butt grow.");
 					if(data.player.chestVal == 7){
+						data.player.newChange += "bimobBod"
 						writeText("Along with your ass, your massive tits also start getting hyper-sensitive again, making it almost impossible to focus on anything else as you start groping at them and squirming in place.");
 						writeText("The heat spreads throughout your whole body, your whorish moans getting louder as the rest of your body changes to match your ass and tits.");
 						data.player.buildVal = 6;
@@ -1817,27 +1855,44 @@ function writeScene(scene) {
 				break;
 			}
 			case "transFemDick" : {
-				addFlag("trans1");
-				loseTokens(1);
-				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-				if(data.player.dick > 3){
-					data.player.newChange += "transFemDick";
-					data.player.dick = 3;
-					data.player.genitalsVal = 3;
-					writeText("As the coin shatters, you can feel a faint energy pass through your body, making everything feel lighter for a moment.");
-					writeText("That energy swirls around inside for a moment, before focusing completely on your cock.");
-					writeText("As that feeling quickly turns into pleasure, you can't help but buck your hips as a feeling like an orgasm, but not <i>quite</i> as satisfying, pulses through you.");
-					writeText("When it passes, your breathing is a bit ragged, and you can see you were practically <i>pissing</i> out precum... and that your cock has shrunk down to a meager three inches.");
+				if(data.player.dick == 1)
+					writeText("At this point, the useless little clitty hanging from your crotch can't become any smaller without actually becoming a pussy, which isn't something you're really prepared to do right now...");
+				else{
+					addFlag("trans1");
+					loseTokens(1);
+					writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+					if(data.player.dick > 3){
+						data.player.newChange += "transFemDick";
+						data.player.dick = 3;
+						data.player.genitalsVal = 3;
+						writeText("As the coin shatters, you can feel a faint energy pass through your body, making everything feel lighter for a moment.");
+						writeText("That energy swirls around inside for a moment, before focusing completely on your cock.");
+						writeText("As that feeling quickly turns into pleasure, you can't help but buck your hips as a feeling like an orgasm, but not <i>quite</i> as satisfying, pulses through you.");
+						writeText("When it passes, your breathing is a bit ragged, and you can see you were practically <i>pissing</i> out precum... and that your cock has shrunk down to a meager three inches.");
+					}
+					else if(data.player.dick == 3){
+						data.player.newChange += "transFemDick";
+						data.player.dick = 2;
+						writeText("Another coin shatters, letting out a faint sparkle as it does. The warmth spreads around your crotch again, though it's a lot stronger this time...");
+						writeText("The pleasure surges into you just like before, lingering for much longer this time as your body starts tensing. You can feel precum flowing out of your shrinking dick, the faint flow of air making your thighs feel almost cold as you soak them.");
+						writeText("It doesn't stop the radial heat, though, as you ride the edge of orgasm again, your hands tightening into fists as you hover <i>right at the edge</i> but can't seem to go over it. Rubbing your thighs together only makes you feel needier, and <i>emptier...</i>");
+						writeText("When it passes, you feel even less satisfied than last time, but the sight of your two-incher sends a shot of sexual pleasure through you as you realize that it's on the precipice of becoming practically unusable...");
+					}
+					else if(data.player.dick == 2){
+						data.player.newChange += "transFemClit";
+						addFlag("sissyClit");
+						data.player.dick = 1;
+						writeText("Rather than shattering like normal, this coin shines a bright pink before crumbling into a sparkling powder that shines for just a moment.");
+						writeText("When it disappears, though, you can feel the warmth surge into you, your throat locking up as the searing pleasure shakes you down to your core.");
+						writeText("Your entire body starts to quake in orgasm, your tiny dick shrinking down to looking like nothing more than an oversized clit as pearly-white cum finally starts spurting out of it.");
+						writeText("Rope after rope spurts out, your mind unable to focus as the pleasure erodes your thoughts, unable to think about anything besides cumming, and how <i>empty</i> your ass feels right now.");
+						writeText("Your hand goes to your ass as you cum, a finger sliding in like the most natural thing in the world as your other hand just pokes at the remains of your manhood.");
+						writeText("When your mind finally clears up, you can see that your legs are absolutely <i>covered</i> in your cum, your balls much smaller and hugging closer to your body.");
+						writeText("It doesn't help your embarrassment that oppF was watching the whole time...");
+					}
 				}
-				else if(data.player.dick > 2){
-					data.player.newChange += "transFemDick";
-					data.player.dick = 2;
-					data.player.genitalsVal = 3;
 
-				}
-				else
-
-					writeTransition("tfScreen", "Think about another transformation");
+				writeTransition("tfScreen", "Think about another transformation");
 				writeTransition("postRound1", "Go back to the game");
 				break;
 			}
