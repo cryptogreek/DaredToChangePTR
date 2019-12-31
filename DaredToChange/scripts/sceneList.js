@@ -1650,11 +1650,27 @@ function writeScene(scene) {
 				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
 				writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
 				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+				writeText("Running your hands along it, you quickly learn not to go <i>up</i> the tail, instead gently closing your hand around it and dragging it along the length.");
+				writeText("It's most sensitive right near the base, but it feels really nice to coil it around your wrist and slowly, gently pull away, almost like you're unwinding it.");
 				if(data.player.earsVal == 1){
-					writeText("tempText");
+					writeText("The more you play with your tail, the more focused you get on batting it around, your ears starting to twitch about. Your body starts feeling warmer as you shift in place, thinking straight starting to get a bit harder.");
+					writeText("You gently scratch behind your ears, the sensation feeling absolutely wonderful as your tail starts shifting around instinctively.");
+					writeText("You jump in place, a half-shout, half-moan bursting out of you as your tail slips right alongside your cock, the glossy fur feeling really, <i>really</i> good against your dick.");
+					writeText("Forcing it back under your control, you notice a bit of precum on your tail...");
+					if(data.player.pref == "dom")
+						writeText("Ignoring the cat-like urge, you take a deep breath and wipe it off, not willing to start licking yourself clean in front of oppF...");
+					else if(data.player.pref == "switch"){
+						writeText("You don't really notice what you're doing into you've already finished, your tongue feeling a bit rougher thanks to the transformation, and your pre tasting particularly sweet.");
+						writeText("A bit embarrassed to be seen doing that, you quickly wipe off your tail and refocus.");
+					}
+					else{
+						writeText("You raise it up to your tail, knowing full well what you're about to do, but unable (or maybe unwilling) to really push down the cat-like urge.");	
+						writeText("Your tongue, made a bit rougher from your cat-transformations, drags along it easily, picking up every bit of the precum and smoothing down your sleek, glossy fur.");
+						writeText("Your face flushes a bit, but you refocus now that you're clean.");
+					}
 				}
 				else
-					writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching pair of ears to go with it...");
+					writeText("After a few more seconds of toying around with it, you manage to pull yourself away. You were pretty transfixed just there, and you imagine it would've been more distracting if you had a matching pair of ears...");
 			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
@@ -1674,12 +1690,17 @@ function writeScene(scene) {
 				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
 				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
 				writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
-				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+				writeText("Like with every other transformation, it does feel pretty sensitive as you start waving it around.");
+				writeText("The more you waggle it about, though, the more focused fixated you get on the movement...");
 				if(data.player.earsVal == 2){
-					writeText("<i><b>THIS SCENE SHOULD OCCUR IF YOU BOUGHT A DOG TAIL WITH DOG EARS</b></i>");
+					writeText("Almost instinctively, your ears twitching wildly, you end up lunging towards your own tail. Being the smart person you are, you manage to keep yourself from letting it dart out of your reach!");
+					writeText("Though, you only really managed to grab the tip, but you're able to grab the rest and bundle it up in front of your, your body feeling warmer than it should as you pant into your own fluffy tail.");
+					writeText("You barely realize that you've starting grinding your hips forward, the thought only really clicking when you buck enough that a bit of precum spatters against your tail.");
+					writeText("Your face going red, you quickly try to wipe away the precum before it messes with the fur... though, if anything, it ends up looking glossier for it.");
+					writeText("Shaking your head a bit, you try to refocus on the game, your mind still just a little fixated on catching that tail of yours...");
 				}
 				else
-					writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching pair of ears to go with it...");
+					writeText("You do quickly realize you're about to start chasing your own tail and shake off the idea, albeit with surprising difficulty. If you also had a pair of fluffy dog ears, you're not sure whether you could resist...");
 			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
