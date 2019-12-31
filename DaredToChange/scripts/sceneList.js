@@ -1707,7 +1707,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFoxTail" : {
-			if(data.player.tailVal == 1)
+			if(data.player.tailVal == 4)
 				writeText("The giant fluffy tail behind you reminds you that you kinda already have one of those...");
 			else{
 				addFlag("trans1");
