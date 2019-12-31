@@ -2482,6 +2482,9 @@ function writeScene(scene) {
 		case "oppChatSexGiveTitjob" : {
 			break;
 		}
+		case "round2" : {
+			writeText("Unfortunately, the second round of the game hasn't been implemented yet - only the first. The rest of the content can be found in the transformation menu and in chatting with oppF - keep in mind that lines in the available sex scenes do change depending on some of your transformations.");
+		}
 		default: {
 			writeText("Something went wrong, and you've encountered a bug. Keep in mind where you just where and what you did, and let me know so I can fix it.");
 			writeText("Here's a list of important details. If you message me directly with these jams, I should have a better idea of what caused the problem:");
@@ -2489,7 +2492,7 @@ function writeScene(scene) {
 			writeText("" + JSON.stringify(data) + "");
 			writeText("Browser:" + navigator.appCodeName  + "");
 			writeText("OS:" + navigator.platform  + "");
-			writeTransition("postRound1", "Go back");
+			writeTransition(""+currentScene, "Go back");
 			break;
 		}
 	}
