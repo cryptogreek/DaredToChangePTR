@@ -1650,6 +1650,11 @@ function writeScene(scene) {
 				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
 				writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
 				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+				if(data.player.earsVal == 1){
+					writeText("tempText");
+				}
+				else
+					writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching pair of ears to go with it...");
 			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
@@ -1670,6 +1675,11 @@ function writeScene(scene) {
 				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
 				writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
 				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+				if(data.player.earsVal == 2){
+					writeText("<i><b>THIS SCENE SHOULD OCCUR IF YOU BOUGHT A DOG TAIL WITH DOG EARS</b></i>");
+				}
+				else
+					writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching pair of ears to go with it...");
 			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
@@ -1689,6 +1699,11 @@ function writeScene(scene) {
 				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
 				writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
 				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+				if(data.player.earsVal == 4){
+					writeText("tempText");
+				}
+				else
+					writeText("You stop yourself before you end up going too far, though. You're not sure how easy that would be if you had a matching pair of ears to go with it...");
 			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
