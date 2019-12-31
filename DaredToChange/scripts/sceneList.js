@@ -1691,7 +1691,7 @@ function writeScene(scene) {
 				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
 				writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
 				writeText("Like with every other transformation, it does feel pretty sensitive as you start waving it around.");
-				writeText("The more you waggle it about, though, the more focused fixated you get on the movement...");
+				writeText("The more you waggle it about, though, the more fixated you get on the movement...");
 				if(data.player.earsVal == 2){
 					writeText("Almost instinctively, your ears twitching wildly, you end up lunging towards your own tail. Being the smart person you are, you manage to keep yourself from letting it dart out of your reach!");
 					writeText("Though, you only really managed to grab the tip, but you're able to grab the rest and bundle it up in front of your, your body feeling warmer than it should as you pant into your own fluffy tail.");
