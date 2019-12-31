@@ -1454,15 +1454,13 @@ function writeScene(scene) {
 				writeTransition("transMascChest", "Change to look a bit more manly");
 			else
 				writeText("Your body is already pretty broad and stocky, so it'd be a waste of a coin to try again.");
-			if(data.player.flags.includes("transMascAss") != true){
-				if(data.player.flags.includes("transFemAss")){
-					writeText("Using tokens to make your ass both more firm and more jiggly has caused some small compatibility issues, but you can still try and firm up.");
-					writeTransition("transMascAss", "Firm up that rear");
-				}
-				else{
-					writeText("You could also firm up that ass of yours specifically...");
-					writeTransition("transMascAss", "Firm up that rear");
-				}
+			if(data.player.flags.includes("transFemAss")){
+				writeText("Using tokens to make your ass both more firm and more jiggly has caused some small compatibility issues, but you can still try and firm up.");
+				writeTransition("transMascAss", "Firm up that rear");
+			}
+			else{
+				writeText("You could also firm up that ass of yours specifically...");
+				writeTransition("transMascAss", "Firm up that rear");
 			}
 			else
 				writeText("You've already firmed up your ass a lot, so doing the same thing would probably be a waste of a coin.");
@@ -1482,16 +1480,24 @@ function writeScene(scene) {
 			break;
 		}
 		case "tfScreenFem" : {
-			writeText("If you wanted, you could probably grow a nice pair of breasts with one of these tokens...");
-			writeTransition("transFemBreasts", "Grow out your chest a little");
-
-			if(data.player.flags.includes("transMascAss")){
-				writeText("Using tokens to make your ass both more firm and more jiggly has caused some small compatibility issues, but you can still try and get it nice and thick.");
-				writeTransition("transFemAss", "Get that ass nice and jiggly");
+			if(data.player.chestVal == 7){
+				writeText("Your tits are already pretty large as it is. If they get any bigger, it would probably prevent you from playing...");
 			}
 			else{
-				writeText("Alternatively, you could round out that booty of yours and get it nice and <i>fat...</i>");
-				writeTransition("transFemAss", "Get that ass nice and jiggly");
+				writeText("If you wanted, you could probably grow a nice pair of breasts with one of these tokens...");
+				writeTransition("transFemBreasts", "Grow out your chest a little");
+			}
+			if(data.player.assVal == 5)
+				writeText("With your ass already being the pillowy mass of fuckable flesh it already is, trying to make bigger probably isn't in your best interest...");
+			else{
+				if(data.player.flags.includes("transMascAss")){
+					writeText("Using tokens to make your ass both more firm and more jiggly has caused some small compatibility issues, but you can still try and get it nice and thick.");
+					writeTransition("transFemAss", "Get that ass nice and jiggly");
+				}
+				else{
+					writeText("Alternatively, you could round out that booty of yours and get it nice and <i>fat...</i>");
+					writeTransition("transFemAss", "Get that ass nice and jiggly");
+				}
 			}
 			if(data.player.dick < 2)
 				writeText("Of course, you can't really shrink your tiny little dicklet down any further without growing yourself a pussy, which isn't really an option yet...");
@@ -1507,7 +1513,7 @@ function writeScene(scene) {
 		case "tfScreenRemove" : {
 			if(data.player.flags.includes("fairyRej"))
 				writeTransition("transFairyRem", "Remove the Fae-Form punishment");
-			else if (data.player.flags.includes("golemRej"))
+			if (data.player.flags.includes("golemRej"))
 				writeTransition("transFairyRem", "Remove the Golem's Shape punishment");
 			else
 				writeSpecial("You have no punishments currently affecting you.");
