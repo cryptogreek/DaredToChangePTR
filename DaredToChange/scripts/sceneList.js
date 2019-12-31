@@ -1427,15 +1427,15 @@ function writeScene(scene) {
 		}
 		case "tfScreenAnimal" : {
 			writeText("oppF mentioned that you could grow animal ears if you wanted...");
-			if(data.player.tailVal == 1)
+			if(data.player.earsVal == 1)
 				writeText("The sleek, glossy pair of cat ears atop your head reminds you that you don't really need another set, so there's not much reason using a coin on that...");
 			else
 			writeTransition("transCatEars", "Grow a pair of sleek cat ears");
-			if(data.player.tailVal == 2)
+			if(data.player.earsVal == 2)
 				writeText("The droopy pair of dog ears atop your head reminds you that you don't really need another set, so there's not much reason using a coin on that...");
 			else
 			writeTransition("transDogEars", "Grow a pair of floofy dog ears");
-			if(data.player.tailVal == 4)
+			if(data.player.earsVal == 4)
 				writeText("The big fluffy pair of fox ears atop your head reminds you that you don't really need another set, so there's not much reason using a coin on that...");
 			else
 				writeTransition("transFoxEars", "Grow a pair of fluffy fox ears");
