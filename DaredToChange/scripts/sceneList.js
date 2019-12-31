@@ -1795,7 +1795,7 @@ function writeScene(scene) {
 			break;
 		}
 		case "transFemBreasts" : {
-			if(data.player.chestVal == 2)
+			if(data.player.chestVal == 7)
 				writeText("With your already huge chest, it might be better to avoid making your tits any bigger... For now, at least.");
 			else{
 				addFlag("trans1");
