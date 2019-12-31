@@ -1600,7 +1600,9 @@ function writeScene(scene) {
 				writeText("Reaching your hands up, you lightly grab a nice, fluffy handful and start toying around with them to see how they feel, your body relaxing quite a bit as you just enjoy the fluff.");
 				writeText("If anything, it makes you a little drowsy... You feel incredibly comfy while just toying with the fluffiness, finding it a little hard to focus...");
 				if(data.player.tailVal == 4){
-
+					writeText("Your tail reflexively moves to encircle you, surrounding you by a great big cushion of dreamy fluffiness. It's incredibly relaxing.");
+					writeSpeech("opp","","...Are, uh... Are you about to take a nap?");
+					writeText("Your");
 				}
 				else
 					writeText("You stop yourself before you end up getting too distracted, though. You're not sure how easy that would be if you had a matching tail to go with it...");
@@ -1818,6 +1820,16 @@ function writeScene(scene) {
 					writeText("You could swear you feel them across your entire body this time, forcing you to the edge of orgasm and holding you there until the suddenly stop, leaving you pent-up and gasping for air.");
 					writeText("Your tits are huge now, each one at least the size of your head and both of them sensitive enough that a strong breeze would make you moan uncontrollably.");
 					data.player.chestVal = 7;
+					if(data.player.chestVal == 5){
+						data.player.newChange += "bimboBod"
+						writeText("Along with your tits, your giant ass also start getting hyper-sensitive again, making it almost impossible to focus on anything else as you start squeezing your tits and squirming in place.");
+						writeText("The heat spreads throughout your whole body, your whorish moans getting louder as the rest of your body changes to match your ass and tits.");
+						data.player.buildVal = 6;
+						data.player.legsVal = 6;
+						data.player.hairVal = 2;
+						writeText("Your body swells in all the right ways, filling out your curves and legs and leaving you looking more stacked than a streetwalker, your new hair dropping down far lower than before.");
+						writeText("You could swear you'd seen <i>bimbos</i> with less erotic bodies...");
+					}
 				}
 			}
 			writeTransition("tfScreen", "Think about another transformation");
@@ -1843,13 +1855,14 @@ function writeScene(scene) {
 				writeText("Warmth starts building around your ass, the heat growing more and more as you try to hold back a moan as you feel your rear grow out even more.");
 				writeText("A sensation almost like having it groped across every inch of the surface has you gasping as you could swear you <i>feel</i> the weight of your butt grow.");
 				if(data.player.chestVal == 7){
-					data.player.newChange += "bimobBod"
+					data.player.newChange += "bimboBod"
 					writeText("Along with your ass, your massive tits also start getting hyper-sensitive again, making it almost impossible to focus on anything else as you start groping at them and squirming in place.");
 					writeText("The heat spreads throughout your whole body, your whorish moans getting louder as the rest of your body changes to match your ass and tits.");
 					data.player.buildVal = 6;
 					data.player.legsVal = 6;
 					data.player.hairVal = 2;
-					writeText("Your ");
+					writeText("Your body swells in all the right ways, filling out your curves and legs and leaving you looking more stacked than a streetwalker, your new hair dropping down far lower than before.");
+					writeText("You could swear you'd seen <i>bimbos</i> with less erotic bodies...");
 				}
 				else
 					writeText("Your focus is hazy as the pleasure of just sitting on your ass keeps you turned on, but it gradually starts to fade until you can think pretty clearly, despite still being just as turned on...");
