@@ -1427,18 +1427,42 @@ function writeScene(scene) {
 		}
 		case "tfScreenAnimal" : {
 			writeText("oppF mentioned that you could grow animal ears if you wanted...");
+			if(data.player.tailVal == 1)
+				writeText("The sleek, glossy pair of cat ears atop your head reminds you that you don't really need another set, so there's not much reason using a coin on that...");
+			else
 			writeTransition("transCatEars", "Grow a pair of sleek cat ears");
+			if(data.player.tailVal == 2)
+				writeText("The droopy pair of dog ears atop your head reminds you that you don't really need another set, so there's not much reason using a coin on that...");
+			else
 			writeTransition("transDogEars", "Grow a pair of floofy dog ears");
-			writeTransition("transFoxEars", "Grow a pair of fluffy fox ears");
+			if(data.player.tailVal == 4)
+				writeText("The big fluffy pair of fox ears atop your head reminds you that you don't really need another set, so there's not much reason using a coin on that...");
+			else
+				writeTransition("transFoxEars", "Grow a pair of fluffy fox ears");
 
 			writeText("And of course, oppShe mentioned tails, too...");
-			writeTransition("transCatTail", "Grow a nice, thin cat tail");
-			writeTransition("transDogTail", "Grow a floofy dog tail");
-			writeTransition("transFoxTail", "Grow an absurdly fluffy fox tail");
+			if(data.player.tailVal == 1)
+				writeText("The sleek, glossy tail behind you reminds you that you kinda already have a cat's tail, so there's not much reason using a coin for another...");
+			else
+				writeTransition("transCatTail", "Grow a nice, thin cat tail");
+			if(data.player.tailVal == 2)
+				writeText("The floofy, waggling tail behind you reminds you that you kinda already have a dog's tail, so there's not much reason using a coin for another...");
+			else
+				writeTransition("transDogTail", "Grow a floofy dog tail");
+			if(data.player.tailVal == 4)
+				writeText("The titanic pile of fluffy tail behind you reminds you that you kinda already have a fox-tail, so there's not much reason using a coin for another...");
+			else
+				writeTransition("transFoxTail", "Grow an absurdly fluffy fox tail");
 
-			writeText("But if you were feeling a little more frisky, there's always...");
-			writeTransition("transHorseCock", "Get yourself a fat horse-cock");
-			writeTransition("transDogCock", "Grow a knotty doggy dick");
+			writeText("But if you were feeling a little more frisky, there's always <i>those parts</i>...");
+			if(data.player.genitalsVal == 6)
+				writeText("You probably don't need <i>another</i> giant, swinging horsecock between your legs, so better to not use a token on that...");
+			else
+				writeTransition("transHorseCock", "Get yourself a fat horse-cock");
+			if(data.player.genitalsVal == 7)
+				writeText("You already have a throbbing doggy dick and bright red knot, so you don't need another one of those...");
+			else
+				writeTransition("transDogCock", "Grow a knotty doggy dick");
 
 			writeText("Of course, there are always other things to do, too...");
 			writeTransition("tfScreen", "Think about another transformation");
@@ -1602,7 +1626,9 @@ function writeScene(scene) {
 				if(data.player.tailVal == 4){
 					writeText("Your tail reflexively moves to encircle you, surrounding you by a great big cushion of dreamy fluffiness. It's incredibly relaxing.");
 					writeSpeech("opp","","...Are, uh... Are you about to take a nap?");
-					writeText("Your");
+					writeText("Your eyes snap back open as you sit up straight, your tail sweeping its way back behind you.");
+					writeSpeech("player","","...It's comfy.");
+					writeSpeech("opp","","I believe it...");
 				}
 				else
 					writeText("You stop yourself before you end up getting too distracted, though. You're not sure how easy that would be if you had a matching tail to go with it...");
@@ -1612,50 +1638,59 @@ function writeScene(scene) {
 			break;
 		}
 		case "transCatTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.tailVal = 1;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-
+			if(data.player.tailVal == 1)
+				
+			else{
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.tailVal = 1;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a long, sleek cat's tail coming out from right above your ass. Jet black and glossy, you can make it move with just a little bit of focus.");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transDogTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			console.log("dogTailAdded");
-			addTrans();
-			data.player.tailVal = 2;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-
+			if(data.player.tailVal == 1)
+				writeText("The floofy, waggling tail behind you reminds you that you kinda already have one of those...");
+			else{
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				console.log("dogTailAdded");
+				addTrans();
+				data.player.tailVal = 2;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a big and fluffy dog's tail, wagging around. You can get it to be still with a little bit of focus, but you know that it'll start wagging uncontrollably if you go getting <i>too</i> excited.");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
 		}
 		case "transFoxTail" : {
-			addFlag("trans1");
-			loseTokens(1);
-			data.player.newChange +="tail";
-			console.log(data.player.newChange)
-			addTrans();
-			data.player.tailVal = 4;
-			writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
-			writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
-			writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
-			writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
-
+			if(data.player.tailVal == 1)
+				
+			else{
+				addFlag("trans1");
+				loseTokens(1);
+				data.player.newChange +="tail";
+				console.log(data.player.newChange)
+				addTrans();
+				data.player.tailVal = 4;
+				writeText("You flip the coin in the air, a bright spark flashing out of it at its highest point.");
+				writeText("A second later, a warm surge of energy seems to flow down from your head through your spine, causing your whole body to jolt.");
+				writeText("It fades quickly, leaving you with a titanic mound of the fluffy substance known to man - a fox's tail. With a bit of focus, you can move it, though you note that when it's behind you, it actually makes a really good cushion/");
+				writeText("Of course, it does feel pretty sensitive, even to the gentle airflow of the room...");
+			}
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
 			break;
@@ -1673,6 +1708,9 @@ function writeScene(scene) {
 			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
 			writeText("Seeing as you lack a sheathe and this big guy swings low, there's no way you'll be wearing anything below the hips for a while.");
 			writeText("You now have a long, heavy, speckled shaft with a medial ring swelling out halfway down, and a fat, blunt head that promises to <i>stretch</i> anything it enters...");
+			writeText("Touching it, you can feel that the texture is completely different - it feels rougher, and the skin slides around way easier... Just trying to jerk part of it requires both hands.");
+			writeText("You heft it up for a moment before letting it drop, a heavy <i>THWAP</i> ringing out as it slaps against your thighs and sends a shot of pleasure through your body.");
+			writeText("This promises to be fun to play with...");
 
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
@@ -1691,6 +1729,9 @@ function writeScene(scene) {
 			writeText("A second later, you feel a powerful heat <i>surge</i> through your body, focusing on your crotch.");
 			writeText("Without any sort of natural sheathe, the feeling of wearing anything below your hips sets your mind aflame as you see it.");
 			writeText("You now have a fat, ruby-red cock covered in veins and shining sleekly, sitting atop an even <i>fatter</i> knot. It feels so warm, even now...");
+			writeText("Running your hands over it, you can't help but notice how smooth it feels - your hands slide along it easily, feeling pleasantly cool across the extra-warm shaft.");
+			writeText("And of course, there's the knot... Toying around with it feels good, but wrapping your hands around the knot, your entire body tenses as your hips buck forward, your cock <i>convinced</i> you were knot-deep in some poor bitch.");
+			writeText("You can't hold on for more than a second, but the raw pleasure of just <i>thinking</i> you were knotting something makes you wonder how good the real deal must feel...");
 
 			writeTransition("tfScreen", "Think about another transformation");
 			writeTransition("postRound1", "Go back to the game");
