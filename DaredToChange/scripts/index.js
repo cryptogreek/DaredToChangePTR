@@ -90,14 +90,14 @@ var playerHeightArray = [
 ];
 
 var oppBuildArray = [
-{desc: "and he's pretty well-built, with his toned muscles seeming fairly obvious from where you're looking.",},
-{desc: "and she's pretty well-built, with her toned muscles seeming fairly obvious from where you're looking.",},
-{desc: "and he's looking fairly curvy now, thanks to the effects of the transformation.",},
-{desc: "and she's looking fairly curvy now, thanks to the effects of the transformation.",},
-{desc: "and he's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
-{desc: "and she's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
-{desc: "and between his broad shoulders and defined muscles, he's looking more and more like the perfect alpha-male body.",},
-{desc: "and between her hourglass figure and birthing hips, she's looking more and more like she has a perfectly womanly body.",},
+{desc: " and he's pretty well-built, with his toned muscles seeming fairly obvious from where you're looking.",},
+{desc: " and she's pretty well-built, with her toned muscles seeming fairly obvious from where you're looking.",},
+{desc: " and he's looking fairly curvy now, thanks to the effects of the transformation.",},
+{desc: " and she's looking fairly curvy now, thanks to the effects of the transformation.",},
+{desc: " and he's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
+{desc: " and she's looking a lot more slim and fragile now, thanks to the effects of the transformation.",},
+{desc: " and between his broad shoulders and defined muscles, he's looking more and more like the perfect alpha-male body.",},
+{desc: " and between her hourglass figure and birthing hips, she's looking more and more like she has a perfectly womanly body.",},
 ];
 var playerBuildArray = [
 {desc: " and you're probably pretty-average weight-wise.",},
@@ -182,10 +182,10 @@ var playerLegsArray = [
 ];
 
 var oppAssArray = [
-{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Looking at it, you can't help but feel curious about how firm it would feel in your hands...",},
-{desc: "And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Despite how firm you would <i>swear</i> it has to be, there always seems to be just enough jiggle that it shakes with every movement.",},
-{desc: "And of course, those legs lead right up into a thick, fat ass that threatens to spill over the seat. Whenever your opponent shifts in place, you could swear it practically ripples.",},
-{desc: "And of course, those legs lead right up into a taut little bubble-butt that you definitely won't see on a real man. It must be really sensitive, too, if your opponent's gentle squirming is anything to go by.",},
+{desc: " And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Looking at it, you can't help but feel curious about how firm it would feel in your hands...",},
+{desc: " And of course, those legs lead right up into a well-toned ass that pulls your attention to it. Despite how firm you would <i>swear</i> it has to be, there always seems to be just enough jiggle that it shakes with every movement.",},
+{desc: " And of course, those legs lead right up into a thick, fat ass that threatens to spill over the seat. Whenever your opponent shifts in place, you could swear it practically ripples.",},
+{desc: " And of course, those legs lead right up into a taut little bubble-butt that you definitely won't see on a real man. It must be really sensitive, too, if your opponent's gentle squirming is anything to go by.",},
 
 ];
 var playerAssArray = [
@@ -736,7 +736,7 @@ function renamePlayer() {
 		data.story[0].lName = "Devons";
 		data.story[0].piece = "blue";
 		data.story[0].height = 73;
-		data.story[0].buildVal = 1;
+		data.story[0].buildVal = 0;
 		data.story[0].clothesVal = 0;
 		data.story[0].hairVal = 0;
 		data.story[0].legsVal = 0;
@@ -750,7 +750,7 @@ function renamePlayer() {
 		data.story[0].lName = "Kendrix";
 		data.story[0].piece = "green";
 		data.story[0].height = 67;
-		data.story[0].buildVal = 0;
+		data.story[0].buildVal = 1;
 		data.story[0].clothesVal = 1;
 		data.story[0].hairVal = 1;
 		data.story[0].legsVal = 3;
