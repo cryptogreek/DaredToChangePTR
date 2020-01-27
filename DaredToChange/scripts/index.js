@@ -20,6 +20,7 @@ var data = {
 		tokens: 0,
 		will: 5,
 		dick: 6,
+		dickType: "man",
 		height: 63,
 		heightVal:0,
 		buildVal:0,
@@ -46,6 +47,7 @@ var data = {
 		sex:"M",
 		will:5,
 		dick:7,
+		dickType: "man",
 		height:65,
 		heightVal:0,
 		buildVal:0,
@@ -638,6 +640,9 @@ function replaceCodenames(text) {
 			text = text.replace('oppShe', 'he');
 			text = text.replace('OppShe', 'He');
 			text = text.replace('oppHim', 'him');
+			text = text.replace('oppHis', 'his');
+			text = text.replace('OppHis', 'His');
+			text = text.replace('oppSir', 'Sir');
 		}
 		else{
 			text = text.replace('oppHer', 'her');
@@ -645,6 +650,9 @@ function replaceCodenames(text) {
 			text = text.replace('oppShe', 'she');
 			text = text.replace('OppShe', 'She');
 			text = text.replace('oppHim', 'her');
+			text = text.replace('oppHis', 'her');
+			text = text.replace('OppHis', 'Her');
+			text = text.replace('oppSir', 'Ma\'am');
 		}
 		for (codenameIndex = 0; codenameIndex < data.story.length; codenameIndex++) {
 			codenameCheck = data.story[codenameIndex].index + "F";
