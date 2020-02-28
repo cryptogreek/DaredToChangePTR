@@ -295,35 +295,27 @@ function startup() {
 }
 
 function bodyCheck(){
-	if(data.player.pref != "dom" && data.player.height < data.story[0].height && data.player.dick < 2){
-		if(!data.player.bodyFlags.includes("sissy")){
+	if(data.player.pref != "dom" && data.player.height < data.story[0].height && data.player.dick < 2)
+		if(!data.player.bodyFlags.includes("sissy"))
 			data.player.bodyFlags += "sissy";
-		}
-	}
 	
-	if(data.player.buildVal == 6 && data.player.legsVal == 6 && data.player.hairVal == 2){
-		if(!data.player.bodyFlags.includes("bimbo")){
+	if(data.player.buildVal == 6 && data.player.legsVal == 6 && data.player.hairVal == 2)
+		if(!data.player.bodyFlags.includes("bimbo"))
 			data.player.bodyFlags += "bimbo";
-		}
-	}
-	console.log("sissyCheck: "+data.player.bodyFlags.includes("sissy"));
-	data.player.bodyFlags = data.player.bodyFlags.replace('sissy','');
-	console.log("sissyCheck: "+data.player.bodyFlags.includes("sissy"));
+
+	if(data.player.genitalsVal == 6)
+		data.player.dickType = "horse";
+	else if(data.player.genitalsVal == 7)
+		data.player.dickType = "dog";
 	
 
-
-	if(data.player.dick > 1){
-		if(data.player.bodyFlags.includes('sissy')){
+	if(data.player.dick > 1)
+		if(data.player.bodyFlags.includes('sissy'))
 			data.player.bodyFlags = data.player.bodyFlags.replace('sissy','');
-		}
-	}
 	
-	if(data.player.buildVal != 6 && data.player.legsVal != 6 && data.player.hairVal != 2){
-		if(data.player.bodyFlags.includes("bimbo")){
+	if(data.player.buildVal != 6 && data.player.legsVal != 6 && data.player.hairVal != 2)
+		if(data.player.bodyFlags.includes("bimbo"))
 			data.player.bodyFlags = data.player.bodyFlags.replace("bimbo","");
-		}
-	}
-	
 }
 
 function restartButton() {
