@@ -36,6 +36,7 @@ var data = {
 		flags: "",
 		bodyFlags: "",
 		round:0,
+		version:"Version 0.2",
 	},
 	story: [{
 		index: "opp",
@@ -626,12 +627,32 @@ function writeText (text) {
 }
 
 function sceneTransition(scene) {
+	document.getElementById('output').innerHTML = '';
 	console.log("scene transition started");
 	wrapper.scrollTop = 0;
 	updateMenu();
-	bodyCheck();
 	hideStuff();
-	document.getElementById('output').innerHTML = '';
+	console.log("Version pre-change: "+data.player.version);
+	if(data.player.version == null || data.player.version != document.getElementById('version').innerHTML){
+		writeSpecial("Your save data is from a different version of DtC. Your save data is now being converted to the new version of the game.");
+		if(data.player.version == null || data.player.version == "Version 0.1"){
+			writeSpecial("Updating save file from Version 0.1 to "+document.getElementById('version').innerHTML+".");
+			if(data.player.dickType == null){
+				if(data.player.genitalsVal == 6)
+					data.player.dickType = "horse";
+				else if(data.player.genitalsVal == 7)
+					data.player.dickType = "dog";
+			}
+			if(data.player.bodyFlags == null)
+				data.player.bodyFlags = "";
+			if(data.story[0].dickType == null)
+				data.story[0].dickType = "man";
+		}
+		writeSpecial("...");
+	}
+	data.player.version = document.getElementById('version').innerHTML;
+	console.log("Version pre-change: "+data.player.version);
+	bodyCheck();
 	tempScene = scene;
 	writeScene(scene);
 	data.player.currentScene = scene;
@@ -844,12 +865,7 @@ function loadFile(){
 		alert("Invalid pasted data! If we tried to use this, the game would completely break!");
 		loadSlot(191);
 	}
-	else {
-		saveSlot(190);
-		loadSlot(190);
-	}
 	updateSave();
-	nameUpdate();
 }
 
 function generateSave() {
